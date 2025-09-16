@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-background: #FEFEFE; /* near-white */
+    --color-foreground: #1A1A1A; /* near-black */
+    --color-border: #E9ECEF; /* light-gray */
+    --color-input: #FFFFFF; /* white */
+    --color-ring: #2D5A27; /* deep-forest-green */
+    
+    /* Card Colors */
+    --color-card: #FFFFFF; /* white */
+    --color-card-foreground: #1A1A1A; /* near-black */
+    --color-popover: #FFFFFF; /* white */
+    --color-popover-foreground: #1A1A1A; /* near-black */
+    
+    /* Muted Colors */
+    --color-muted: #F8F9FA; /* subtle-gray */
+    --color-muted-foreground: #6C757D; /* medium-gray */
+    
+    /* Primary Colors */
+    --color-primary: #2D5A27; /* deep-forest-green */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Secondary Colors */
+    --color-secondary: #4A90A4; /* calming-blue-gray */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    
+    /* Accent Colors */
+    --color-accent: #F4A261; /* warm-amber */
+    --color-accent-foreground: #1A1A1A; /* near-black */
+    
+    /* Status Colors */
+    --color-success: #28A745; /* standard-green */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    --color-warning: #FFC107; /* attention-yellow */
+    --color-warning-foreground: #1A1A1A; /* near-black */
+    
+    --color-error: #DC3545; /* clear-red */
+    --color-error-foreground: #FFFFFF; /* white */
+    
+    --color-destructive: #DC3545; /* clear-red */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Surface Color */
+    --color-surface: #F8F9FA; /* subtle-gray */
+    
+    /* Text Colors */
+    --color-text-primary: #1A1A1A; /* near-black */
+    --color-text-secondary: #6C757D; /* medium-gray */
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-caption {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .shadow-subtle {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+  
+  .shadow-elevated {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+  
+  .transition-smooth {
+    transition: all 200ms ease-out;
+  }
+  
+  .transition-spring {
+    transition: all 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+}
